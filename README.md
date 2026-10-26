@@ -62,10 +62,21 @@ npx skills add addyosmani/agent-skills --skill test-driven-development   # red-g
 
 > **Installing one skill?** A per-skill `npx` install copies only
 > `skills/<name>/`, not the repo-level `references/` directory. The skill still
-> works, but paths to supplementary shared checklists are unavailable. Use a
-> whole-repo integration, clone the repository, or copy the needed checklist into
-> a `references/` directory inside the installed skill. This portability gap is
-> tracked in [#361](https://github.com/addyosmani/agent-skills/issues/361).
+> works, but paths to supplementary shared checklists are unavailable. In this
+> fork, run [`scripts/postinstall.sh`](#installing-from-this-fork) after
+> installing to link `references/` into place. Upstream tracks the gap in
+> [#361](https://github.com/addyosmani/agent-skills/issues/361).
+
+## Installing from this fork
+
+The shared checklists live in the repo-root `references/` directory, outside every skill directory, and `npx skills add` copies only `skills/<name>/`. Install as usual, then run the fix:
+
+```bash
+npx skills add ivan-kleshnin/agent-skills
+scripts/postinstall.sh
+```
+
+It links `references/` next to every `skills/` directory it finds in the current directory and in `$HOME` — which is where the `../../references/<file>.md` paths inside the skills resolve. The links point at this checkout, so `git pull` refreshes the checklists without reinstalling.
 
 Prefer a native integration? Pick your tool below.
 
