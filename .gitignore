@@ -8,3 +8,4 @@ node_modules/
 evals/results/
 evals/plugin/results/
 __pycache__/
+.idea/
