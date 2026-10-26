@@ -127,7 +127,7 @@ Use the spec-driven-development skill.
 
 Ask clarifying questions about the objective and target users, core features and
 acceptance criteria, stack preferences and constraints, and known boundaries.
-Then write a spec covering objective, commands, project structure, code style,
+Then write a spec covering objective, commands, project structure,
 testing strategy, and boundaries. Save it as SPEC.md in the project root and
 confirm with me before any code is written.
 EOF

@@ -81,7 +81,7 @@ ASSUMPTIONS I'M MAKING:
 
 Don't silently fill in ambiguous requirements. The spec's entire purpose is to surface misunderstandings *before* code gets written — assumptions are the most dangerous form of misunderstanding.
 
-**Write a spec document covering these six core areas:**
+**Write a spec document covering these five core areas:**
 
 1. **Objective** — What are we building and why? Who is the user? What does success look like?
 
@@ -103,11 +103,9 @@ Don't silently fill in ambiguous requirements. The spec's entire purpose is to s
    docs/          → Documentation
    ```
 
-4. **Code Style** — One real code snippet showing your style beats three paragraphs describing it. Include naming conventions, formatting rules, and examples of good output.
+4. **Testing Strategy** — What framework, where tests live, coverage expectations, which test levels for which concerns.
 
-5. **Testing Strategy** — What framework, where tests live, coverage expectations, which test levels for which concerns.
-
-6. **Boundaries** — Three-tier system:
+5. **Boundaries** — Three-tier system:
    - **Always do:** Run tests before commits, follow naming conventions, validate inputs
    - **Ask first:** Database schema changes, adding dependencies, changing CI config
    - **Never do:** Commit secrets, edit vendor directories, remove failing tests without approval
@@ -128,9 +126,6 @@ Don't silently fill in ambiguous requirements. The spec's entire purpose is to s
 
 ## Project Structure
 [Directory layout with descriptions]
-
-## Code Style
-[Example snippet + key conventions]
 
 ## Testing Strategy
 [Framework, test locations, coverage requirements, test levels]
@@ -249,7 +244,7 @@ The spec is a living document, not a one-time artifact:
 
 Before proceeding to implementation, confirm:
 
-- [ ] The spec covers all six core areas
+- [ ] The spec covers all five core areas
 - [ ] The human has reviewed and approved the spec
 - [ ] The turn ended after saving the spec; approval came in a later turn
 - [ ] Success criteria are specific and testable
